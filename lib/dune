@@ -1,0 +1,3 @@
+(library
+ (name wanaka_retail_bff)
+ (libraries dream cohttp-lwt-unix))

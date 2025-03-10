@@ -1,0 +1,9 @@
+(executable
+ (public_name wanaka_retail_bff)
+ (modules
+    Auth_service
+    Token_service
+    Main
+  )
+ (name main)
+ (libraries wanaka_retail_bff))
