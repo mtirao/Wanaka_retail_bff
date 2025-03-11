@@ -3,6 +3,7 @@
  (modules
     Auth_service
     Token_service
+    Profile_service
     Main
   )
  (name main)

@@ -12,3 +12,12 @@ let generate_token () =
       Client.get ~headers uri >>= fun (resp, body) ->
       Body.to_string body >|= fun body_string ->
       (resp, body_string)
+
+let validate_token auth =
+  let headers = Header.init () 
+    |> fun h -> Header.add h "x-client-id" "wanaka-budget" 
+    |> fun h -> Header.add h "Authorization" auth in
+    let uri = Uri.of_string "http://localhost:3000/api/wanaka/token/validate" in
+      Client.get ~headers uri >>= fun (resp, body) ->
+      Body.to_string body >|= fun body_string ->
+      (resp, body_string)
