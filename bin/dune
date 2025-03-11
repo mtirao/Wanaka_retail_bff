@@ -4,6 +4,7 @@
     Auth_service
     Token_service
     Profile_service
+    Profile_controller
     Main
   )
  (name main)
